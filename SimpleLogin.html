@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Pages From Lei</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="pagesfromlei_favicon.png"
+</head>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- 5 jquery animations used:
+- parallax for home page: https://youtu.be/H3wej1zS5-g?si=vOxP9GiU4XFLdnb2
+- [DONE] carousel preview: https://youtu.be/oNhO80PPrTk?si=8yjGByWvW8nfWknC  
+- [DONE] text typing!: https://youtu.be/w7E8dO5cDFs?si=BaHzTlEwezzdmQI9
+- image hover to reveal text: https://youtu.be/Dbjt2JR4KQM?si=xgm-cyELimq6ptzq
+- light/dark mode:
+-->
+
+<!-- username: user1 -->
+<!-- pass: pass123!@ -->
+
+<body>
+    <header>
+        <div class="menu-logo">
+            <img src="pagesfromlei logo.png" alt="">
+        </div>
+        <div class="logo-name">
+            <h4>Pages From Lei</h4>
+        </div>
+        <ul class="ul-menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Help</a></li>
+        </ul>
+    </header>
+    <div class="bg"></div>
+    
+    <div class="login-container">
+        <img src="login logo.png" alt="" class="loginlogo">
+        <h3>Login</h3>
+        <form id="form" action="/login" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button id="submitButton" type="submit">Login</button>
+        </form>
+    </div>
+    <footer>
+        <p>Copyright © 2024 Pages From Lei</p>
+    </footer>
+
+    <script src="JS.js"></script>
+</body>
+</html>

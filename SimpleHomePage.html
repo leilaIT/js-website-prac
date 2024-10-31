@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page | Pages From Lei</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jquery.hislide.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" type="image/x-icon" href="pagesfromlei_favicon.png">
+</head>
+<script src="jquery-3.1.1.min.js"></script>
+<script src="jquery.hislide.js"></script>
+<body>
+    <header>
+        <div class="menu-logo">
+            <img src="pagesfromlei logo.png" alt="">
+        </div>
+        <div class="logo-name">
+            <h4>Pages From Lei</h4>
+        </div>
+        <ul class="ul-menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Help</a></li>
+        </ul>
+    </header>
+    <div class="bg"></div>
+
+    <div class="home-page-wrapper">
+        <div class="home-page-content">
+            <div id="effect"></div>
+            <script>
+                var x = 0;
+                var textEffect = "Welcome to Lei's Reading List!";
+                var container = document.getElementById('effect');
+
+                function animate(){
+                    if(x < textEffect.length){
+                        container.innerHTML +=textEffect.charAt(x);
+                        x++;
+                        setTimeout(animate, 80);
+                    }
+                }
+                animate();
+            </script>
+        </div>
+    </div>
+    <script>
+        var box = $(document),
+            bgAnimate = $('div.home-page-content');
+        
+        box.on('scroll', function(){
+            var boxAnimate = box.scrollTop();
+            bgAnimate.css('background-position', '0' + -boxAnimate/4 +'px');
+        });
+    </script>
+
+    <div class="img-area hi-slide">
+        <div class="hi-prev"></div>
+        <div class="hi-next"></div>
+        <ul>
+            <li><img src="titles/maharlika.jpg" alt="1" /></li>
+            <li><img src="titles/elusive samurai.jpeg" alt="2" /></li>
+            <li><img src="titles/kagurabachi.png" alt="3" /></li>
+            <li><img src="titles/windbreaker.jpg" alt="4" /></li>
+            <li><img src="titles/tokyo aliens.png" alt="5" /></li>
+            <li><img src="titles/yomi no tsugai.png" alt="6" /></li>
+            <li><img src="titles/tokyo aliens.png" alt="7" /></li>
+        </ul>
+    </div>
+    <script>
+        $('.img-area').hiSlide();
+    </script>
+</body>
+</html>
