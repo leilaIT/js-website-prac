@@ -28,24 +28,22 @@
     </header>
     <div class="bg"></div>
 
-    <div class="home-page-wrapper">
-        <div class="home-page-content">
-            <div id="effect"></div>
-            <script>
-                var x = 0;
-                var textEffect = "Welcome to Lei's Reading List!";
-                var container = document.getElementById('effect');
+    <div class="home-page-content">
+        <div id="effect"></div>
+        <script>
+            var x = 0;
+            var textEffect = "Welcome to Lei's Reading List!";
+            var container = document.getElementById('effect');
 
-                function animate(){
-                    if(x < textEffect.length){
-                        container.innerHTML +=textEffect.charAt(x);
-                        x++;
-                        setTimeout(animate, 80);
-                    }
+            function animate(){
+                if(x < textEffect.length){
+                    container.innerHTML += textEffect.charAt(x);
+                    x++;
+                    setTimeout(animate, 80);
                 }
-                animate();
-            </script>
-        </div>
+            }
+            animate();
+        </script>
     </div>
     <script>
         var box = $(document),
@@ -56,6 +54,17 @@
             bgAnimate.css('background-position', '0' + -boxAnimate/4 +'px');
         });
     </script>
+
+    <div class="divider">
+        <hr>
+        <br>
+        <h3>Currently reading: Maharlika by Rexy Dorado and John Ray.</h3>
+        <br>
+        <h3>The photo used above is from the same comic.</h3>
+        <hr>
+        <br>
+        <h1>Other Titles in my Reading List:</h1>
+    </div>
 
     <div class="img-area hi-slide">
         <div class="hi-prev"></div>
@@ -73,5 +82,29 @@
     <script>
         $('.img-area').hiSlide();
     </script>
+
+    <i class="scroll-up">↑</i>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if($(window).scrollTop() > 300){
+                    $('i').css({
+                        "opacity":"1", "pointer-events":"auto"
+                    });
+                }else{
+                    $('i').css({
+                        "opacity":"0", "pointer-events":"none"
+                    });
+                }
+            });
+            $('i').click(function(){
+                $('html').animate({scrollTop:0}, 500)
+            })
+        });
+    </script>
+
+    <footer>
+        <p>Copyright © 2024 Pages From Lei</p>
+    </footer>
 </body>
 </html>
