@@ -12,6 +12,16 @@
 <script src="jquery-3.1.1.min.js"></script>
 <script src="jquery.hislide.js"></script>
 <body>
+    <div class="page-loader">
+        <div class="loader-spinner">
+        </div>
+    </div>
+    <script>
+        $(window).on('load', function(){
+            $('.page-loader').fadeOut(1500);
+        });
+    </script>
+    
     <header>
         <div class="menu-logo">
             <img src="pagesfromlei logo.png" alt="">
@@ -20,10 +30,10 @@
             <h4>Pages From Lei</h4>
         </div>
         <ul class="ul-menu">
-            <li><a href="">Home</a></li>
+            <li><a href="SimpleHomePage.html">Home</a></li>
             <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Help</a></li>
+            <li><a href="">Genres</a></li>
+            <li><a href="SimpleLogin.html">Sign in</a></li>
         </ul>
     </header>
     <div class="bg"></div>
@@ -58,9 +68,10 @@
     <div class="divider">
         <hr>
         <br>
-        <h3>Currently reading: Maharlika by Rexy Dorado and John Ray.</h3>
+        <h3>Currently reading: 'Maharlika' by Rexy Dorado and John Ray.</h3>
         <br>
-        <h3>The photo used above is from the same comic.</h3>
+        <h3>The photo used above is from a promotional trailer from the same comic.</h3>
+        <br>
         <hr>
         <br>
         <h1>Other Titles in my Reading List:</h1>
@@ -70,13 +81,13 @@
         <div class="hi-prev"></div>
         <div class="hi-next"></div>
         <ul>
-            <li><img src="titles/maharlika.jpg" alt="1" /></li>
-            <li><img src="titles/elusive samurai.jpeg" alt="2" /></li>
-            <li><img src="titles/kagurabachi.png" alt="3" /></li>
-            <li><img src="titles/windbreaker.jpg" alt="4" /></li>
-            <li><img src="titles/tokyo aliens.png" alt="5" /></li>
-            <li><img src="titles/yomi no tsugai.png" alt="6" /></li>
-            <li><img src="titles/tokyo aliens.png" alt="7" /></li>
+            <li><img src="titles/maharlika.jpg" alt="1" title="Maharlika by Rexy Dorado and John Ray"/></li>
+            <li><img src="titles/elusive samurai.jpeg" alt="2" title="The Elusive Samuari by Yusei Matsui"/></li>
+            <li><img src="titles/kagurabachi.png" alt="3" title="Kagurabachi by Takeru Hokazono "/></li>
+            <li><img src="titles/windbreaker.jpg" alt="4" title="Windbreaker by Satoru Nii"/></li>
+            <li><img src="titles/tokyo aliens.png" alt="5" title="Tokyo Aliens by Naoe"/></li>
+            <li><img src="titles/yomi no tsugai.png" alt="6" title="Yomi No Tsugai by Hiromu Arakawa"/></li>
+            <li><img src="titles/dungeon meshi.png" alt="7" title="Dungeon Meshi by Ryoko Kui"/></li>
         </ul>
     </div>
     <script>
